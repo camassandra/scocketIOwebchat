@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+   <!--  FAFICON ???-->
+    
+
+    <title> Cami_Chat_App </title>
+    <link rel="stylesheet" href="/css_1/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron|Quattrocento+Sans" rel="stylesheet">
+    
+</head>
+<body>
+    <div class='violet'> 
+        <div id="wrapper">
+            <div id="menu">
+                <h1 class="welcome">Welcome to my first app with socket.io</h1>
+                 <h2> Status: <div id='alert'> </div> </h2>
+                <p class="logout"><a id="exit" href="#">Or Exit the Chat</a></p>
+                
+            </div>
+        </div>
+        <div style="clear:both"> 
+            <h2> Hi <div class='nickname'> </div> 
+                <div id='status'>   </div> 
+
+            </h2>
+        </div> 
+        <form name="message" id='chatbox'>
+            <input name="usermsg" type="text" id="usermsg" size="63" value='test message for chat' />
+            <input name="submitmsg" type="submit"  id="submitmsg" value="Send" />
+
+            <div id="chatConversation"> <li> </li> </div>
+            
+        </form>
+    </div>
+
+    <div class='skewed-violet'> </div>
+    <div class='green'> </div>
+
+    <script src='/js/jquery-3.2.0.min.js'> </script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src='/js/chat.js'></script>
+    
+</body>
+</html>

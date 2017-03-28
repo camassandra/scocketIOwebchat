@@ -1,0 +1,32 @@
+{
+  "name": "socketiowebchat",
+  "version": "1.0.0",
+  "description": "my first real-time web chat app",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camassandra/scocketIOwebchat.git"
+  },
+  "keywords": [
+    "socket",
+    "IO",
+    "real-time",
+    "chat",
+    "web",
+    "app"
+  ],
+  "author": "camilla ponte",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/camassandra/scocketIOwebchat/issues"
+  },
+  "homepage": "https://github.com/camassandra/scocketIOwebchat#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "pug": "^2.0.0-beta11",
+    "socket.io": "^1.7.3"
+  }
+}

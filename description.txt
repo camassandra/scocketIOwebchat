@@ -1,0 +1,10 @@
+Me and my project mate are lagging behind with group project (webshop). 
+Time is running short and I have planned a gorup project where I can learn 
+and showcase a lot of new features (good understanding of relational database organization, 
+generating a unique random order number, 
+get date for an order and set date for delivery, send reminder sms, custom URL)
+
+
+
+
+Therefore, I will create a chat using scocket.io as a final project 
