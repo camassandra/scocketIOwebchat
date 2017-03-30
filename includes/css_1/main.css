@@ -1,17 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron|Quattrocento+Sans');
+
 .violet{
   padding:20px;
-  font-size:24px;
   text-align:center;
-    height:100px;
+  height:100px;
   background: rgba(155, 100, 170, 0.4) 50%
 }
 
 .green{
   padding:20px;
-  font-size:24px;
-  text-align:center;
+ text-align:center;
   height:100px;
-  background: rgba(120, 150, 150, 0.2) 49%
+  background: rgba(120, 150, 150, 0.4) 49%
 }
 
 
@@ -24,7 +24,11 @@
     background: linear-gradient(to left bottom, rgba(120, 150, 150, 1) 49%, rgba(155, 100, 170, 1) 50%);
 }
 
-h1, h2 {
+.welcome {
+  font-weight: bold;
+  font-size: 28px;
+}
+h1, h2, .nickname {
   color: #512B77;
   font-size: 24px;
   font-weight: bold;
@@ -33,6 +37,7 @@ h1, h2 {
 }
 p {
   color: #0A0113;
+  font-size: 20px;
   font-family: 'Quattrocento Sans', sans-serif; 
 }
 
@@ -53,17 +58,24 @@ p {
   width:430px;
   overflow:auto; 
 }
-#chatConversation, .nickname{
+#chatConversation {
   color: #0A0113;
   font-family: 'Quattrocento Sans', sans-serif; 
   border-color: #0A0113;
   border-style: solid, 4px;
 }
-#status{
+#status {
   color: #0A0113;
+  font-size: 20px;
   font-family: 'Orbitron', sans-serif;
 }
 #exit{
   color: #F78F07;
   font-weight: bold;
+}
+#out{
+  padding:20px;
+  text-align:right;
+  vertical-align: text-bottom;
+  height:100px;
 }

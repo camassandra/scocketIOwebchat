@@ -1,25 +1,13 @@
 // window.onload = function() {
 
-//     var messages = [];
+//     
 //     var socket = io.connect('http://localhost:3700');
 //     var field = document.getElementById("field");
 //     var sendButton = document.getElementById("send");
 //     var content = document.getElementById("content");
 //     var name = document.getElementById("name");
 
-//     socket.on('message', function (data) {
-//         if(data.message) {
-//             messages.push(data);
-//             var html = '';
-//             for(var i=0; i<messages.length; i++) {
-//                 html += '<b>' + (messages[i].username ? messages[i].username : 'Server') + ': </b>';
-//                 html += messages[i].message + '<br />';
-//             }
-//             content.innerHTML = html;
-//         } else {
-//             console.log("There is a problem:", data);
-//         }
-//     });
+
 
 //     sendButton.onclick = sendMessage = function() {
 //         if(name.value == "") {
@@ -51,18 +39,28 @@ var socket = io.connect('http://localhost:8080');
             var message= $('#usermsg').val();
             //this emits message event on server
             socket.emit('messages', message);
-            console.log('message')
-            console.log(message)
-            //
+//sostituire le tre righe successive con function call
+            insertMessage(message);
         });
-        socket.on('messages', function(allthatjazz){
-        	console.log(allthatjazz);
-        	insertMessage(allthatjazz)
-        });
+
+        // socket.on('messages', function(jazz){
+        //     console.log('this is jazz')
+        // 	console.log(jazz);
+        //     insertMessage(jazz)
+        // });
+
         socket.on('message', function(input){
-			console.log('the server sends a message');
-			 insertMessage(input);
+        console.log('server broadcasts a message');
+                    console.log(input);
+                insertMessage(input);
+
         });
+
+        socket.on('chatHistory', function(input){
+            console.log('this is history');
+            console.log(input);
+        $('#chatConversation').html(input);
+			      });
 
         socket.on('status', function(data){
             $('#alert').html(data.message);
@@ -80,12 +78,9 @@ var socket = io.connect('http://localhost:8080');
 		});
 
         function insertMessage(data){
-            console.log('data')
-            console.log(data)
             // var newMessage = document.createElement('li');
             // newMessage.innerHTML = data;
             // var allMessages = document.getElementByTagName('ul')[0];
             $('#chatConversation').append($('<li>').text(data));
             //return allMessages.appendChild(newMessage);
-            
         }

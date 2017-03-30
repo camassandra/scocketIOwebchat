@@ -10,7 +10,7 @@
 
     <title> Cami_Chat_App </title>
     <link rel="stylesheet" href="/css_1/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Orbitron|Quattrocento+Sans" rel="stylesheet">
+   
     
 </head>
 <body>
@@ -19,27 +19,29 @@
             <div id="menu">
                 <h1 class="welcome">Welcome to my first app with socket.io</h1>
                  <h2> Status: <div id='alert'> </div> </h2>
-                <p class="logout"><a id="exit" href="#">Or Exit the Chat</a></p>
-                
             </div>
         </div>
+    </div>
+    <div class='skewed-violet'> </div>
+    <div class='green'> 
         <div style="clear:both"> 
-            <h2> Hi <div class='nickname'> </div> 
-                <div id='status'>   </div> 
-
-            </h2>
-        </div> 
+                    <h2> Hi <div class='nickname'> </div> 
+                        <div id='status'>  </div> 
+                    </h2>
+        </div>
         <form name="message" id='chatbox'>
             <input name="usermsg" type="text" id="usermsg" size="63" value='test message for chat' />
             <input name="submitmsg" type="submit"  id="submitmsg" value="Send" />
 
-            <div id="chatConversation"> <li> </li> </div>
-            
+            <div id="chatConversation"> </div>
         </form>
     </div>
-
-    <div class='skewed-violet'> </div>
-    <div class='green'> </div>
+    <div id='out'>
+        <h1> <a id="exit" href="/toobad"> Or Leave the Chat </a> </h1>
+    </div>
+    
+        
+    
 
     <script src='/js/jquery-3.2.0.min.js'> </script>
     <script src="/socket.io/socket.io.js"></script>
