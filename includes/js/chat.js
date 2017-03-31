@@ -105,7 +105,24 @@ var socket = io.connect('http://localhost:8080');
 	        });
 		}); 
 
+        function warnReset(){
+            $('#warningReset').text('Chat will be reset in 2 minutes. Sorry for the inconvenience :-)' );
+            };
+
+        var d = new Date()
         
+        setInterval(warnReset(), d + 60000);
+        /*
+        
+        function refresh() {
+         if(window.location.reload(true)){
+            d = new Date().getTime()
+            
+         }
+     
+        */
+
+
         function insertMessage(data){
             // var newMessage = document.createElement('li');
             // newMessage.innerHTML = data;

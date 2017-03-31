@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Orbitron|Quattrocento+Sans');
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two|Unica+One');
 
 .violet{
   padding:20px;
@@ -29,20 +29,20 @@
   font-size: 28px;
 }
 h1, h2, .nickname {
-  color: #512B77;
+  color: #2C2A7F;
   font-size: 24px;
   font-weight: bold;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Unica One', cursive;
 
 }
 p {
-  color: #0A0113;
+  color: #2C2A7F;
   font-size: 20px;
-  font-family: 'Quattrocento Sans', sans-serif; 
+  font-family: 'Shadows Into Light Two', cursive;
 }
 
 #overlay {
-    font-family: 'Quattrocento Sans', sans-serif; 
+    font-family: 'Shadows Into Light Two', cursive;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -55,48 +55,63 @@ p {
   visibility: hidden;
   
   margin: 0 auto;
-  color: #BA1D33;
-  font-family: 'Quattrocento Sans', sans-serif; 
+  color: #B21039;
+  font-family: 'Shadows Into Light Two', cursive;
 }
 #wrapper { 
- background: #49A80E;
+ background: #FF3064;
 }
-#submitname{
-  background-color: #0ABA5A;
+#submitname {
+  background-color: #FF3064;
+  color: #B21039;
   border-radius: 20px;
-  border:2px solid #44A070;
+  border:2px solid #B21039;
   width: 70px;
   margin: 0 auto;
   margin-top: 15px;
   padding: 7px 3px;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Unica One', cursive;
 }
+#usermsg{
+  border-radius: 10px;
+  border:2px solid #B21039;
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 7px 10px;
+  font-family: 'Shadows Into Light Two', cursive;
+  font-size: 17px;
+}
+
 #chatbox {
-  border-color: #49A80E;
-  border-width: 10px;
+  border-color: #FF3064;
+  border-width: 7px;
+  border-radius: 10px;
   border-style: solid;
   text-align:left;
   margin:0 auto;
   margin-bottom:25px;
   padding:10px;
   background:#fff;
-  height:270px;
-  width:430px;
+  height:370px;
+  width:630px;
   overflow:auto; 
 }
 #chatConversation {
   color: #0A0113;
-  font-family: 'Quattrocento Sans', sans-serif; 
+  font-family: 'Shadows Into Light Two', cursive;
+  font-size: 17px;
   border-color: #0A0113;
   border-style: solid, 4px;
 }
 #status {
-  color: #0A0113;
-  font-size: 20px;
-  font-family: 'Orbitron', sans-serif;
+  color: #2C2A7F;
+  font-size: 23px;
+  font-family: 'Unica One', cursive;
 }
 #exit{
-  color: #F78F07;
+  color: #E3D61E;
   font-weight: bold;
 }
 #out{
@@ -104,4 +119,42 @@ p {
   text-align:right;
   vertical-align: text-bottom;
   height:100px;
+}
+
+#warning{
+  font-family: 'Shadows Into Light Two', cursive;
+  font-size: 20px;
+  color: #B21039;
+
+}
+#warningReset{
+  font-family: 'Unica One', cursive;
+  font-size: 20px;
+  color: #B21039;
+  margin-top: 10px;
+}
+#submitmsg{
+    margin: 0;
+    padding: 5px 15px;
+    font-family: 'Shadows Into Light Two', cursive;
+    font-weight: bold;
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: #E3D61E;
+    background: #12C3CC;
+    background: -webkit-gradient(linear, left top, left bottom, from(#12C3CC), to(#0078a5));
+    
+    border-top-right-radius: 5px 5px;
+    border-bottom-right-radius: 5px 5px; 
+}
+#submitmsg:hover{
+  text-decoration: none;
+      background: #0FA1A8;
+      background: -webkit-gradient(linear, left top, left bottom, from(#12C3CC), to(#00678e));
+      background: -moz-linear-gradient(top, #0095cc, #00678e);
+      border-top-left-radius: 5px 5px;
+      border-bottom-left-radius: 5px 5px; 
 }

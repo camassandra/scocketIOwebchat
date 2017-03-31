@@ -10,6 +10,7 @@
 
     <title> Cami_Chat_App </title>
     <link rel="stylesheet" href="/css_1/main.css">
+    <script src="/reload/reload.js"></script> 
    
     
 </head>
@@ -32,10 +33,11 @@
         <div style="clear:both"> 
                     <h2> Hi <div class='nickname'>  </div> 
                         <div id='status'>  </div> 
+                        <div id='warningReset'> </div>
                     </h2>
         </div>
         <form name="message" id='chatbox'>
-            <input name="usermsg" type="text" id="usermsg" size="63" value='test message for chat' />
+            <input name="usermsg" type="text" id="usermsg" size="63" value='type here your message' />
             <input name="submitmsg" type="submit"  id="submitmsg" value="Send" />
 
             <div id="chatConversation"> </div>

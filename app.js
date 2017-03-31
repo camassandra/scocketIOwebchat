@@ -4,18 +4,24 @@ const http = require("http");
 //create a http server
 const server = http.createServer(app);
 const io = require('socket.io')(server);
+const reload = require('reload');
+reloadServer= reload(server, app);
+
+//chat history arrays
 let messages = [];
 let users = []
 
 function resetChat(){
 	let messages = [];
 	let users = []
-	//redirect('/')
+	console.log('messages cleared')
+	reloadServer.reload();
 };
-setInterval(resetChat, 60000);
-// port setting
-//app.listen(port); changes to 
+setInterval(resetChat, 180000);
+//every 3 min and reloads page
+//resets chat every hour with 3600000ms 
 
+// port setting
 var port = 8080
 
 //here comes the middleware stuff!
