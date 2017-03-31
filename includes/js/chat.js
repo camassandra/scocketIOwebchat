@@ -1,32 +1,3 @@
-// window.onload = function() {
-
-//     
-//     var socket = io.connect('http://localhost:3700');
-//     var field = document.getElementById("field");
-//     var sendButton = document.getElementById("send");
-//     var content = document.getElementById("content");
-//     var name = document.getElementById("name");
-
-
-
-//     sendButton.onclick = sendMessage = function() {
-//         if(name.value == "") {
-//             alert("Please type your name!");
-//         } else {
-//             var text = field.value;
-//             socket.emit('send', { message: text, username: name.value });
-//             field.value = "";
-//         }
-//     };
-
-// }
-// $(document).ready(function() {
-//     $("#field").keyup(function(e) {
-//         if(e.keyCode == 13) {
-//             sendMessage();
-//         }
-//     });
-// });
 var nickname;
 
 var socket = io.connect('http://localhost:8080');
@@ -106,12 +77,13 @@ var socket = io.connect('http://localhost:8080');
 		}); 
 
         function warnReset(){
-            $('#warningReset').text('Chat will be reset in 2 minutes. Sorry for the inconvenience :-)' );
+            $('#warningReset').text('Chat will be reset every 3 minutes. Sorry for the inconvenience :-)' )
+            console.log('reset warning triggered');
             };
 
         var d = new Date()
         
-        setInterval(warnReset(), d + 60000);
+        setInterval(warnReset, d + 60000);
         /*
         
         function refresh() {

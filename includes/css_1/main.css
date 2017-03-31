@@ -28,12 +28,12 @@
   font-weight: bold;
   font-size: 28px;
 }
-h1, h2, .nickname {
+
+h1, h2  {
   color: #2C2A7F;
   font-size: 24px;
   font-weight: bold;
   font-family: 'Unica One', cursive;
-
 }
 p {
   color: #2C2A7F;
@@ -92,9 +92,26 @@ p {
   text-align:left;
   margin:0 auto;
   margin-bottom:25px;
+  margin-top: 10px;
   padding:10px;
   background:#fff;
   height:370px;
+  width:630px;
+  overflow:auto; 
+}
+
+#socketDescr {
+  border-color: #FF3064;
+  border-width: 7px;
+  border-radius: 10px;
+  border-style: solid;
+  text-align:left;
+  margin:0 auto;
+  margin-bottom:25px;
+  margin-top: 20px;
+  padding:10px;
+  background:#fff;
+  height:auto;
   width:630px;
   overflow:auto; 
 }
@@ -110,9 +127,10 @@ p {
   font-size: 23px;
   font-family: 'Unica One', cursive;
 }
-#exit{
+#exit, a, .nickname {
   color: #E3D61E;
   font-weight: bold;
+  font-family: 'Unica One', cursive;
 }
 #out{
   padding:20px;
