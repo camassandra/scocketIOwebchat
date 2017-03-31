@@ -27,7 +27,7 @@
 //         }
 //     });
 // });
-
+var nickname;
 
 var socket = io.connect('http://localhost:8080');
         //on submit, takes the message 
@@ -39,15 +39,14 @@ var socket = io.connect('http://localhost:8080');
             var message= $('#usermsg').val();
             //this emits message event on server
             socket.emit('messages', message);
-//sostituire le tre righe successive con function call
-            insertMessage(message);
+
         });
 
-        // socket.on('messages', function(jazz){
-        //     console.log('this is jazz')
-        // 	console.log(jazz);
-        //     insertMessage(jazz)
-        // });
+        socket.on('messages', function(jazz){
+            console.log('this is jazz')
+        	console.log(jazz);
+            insertMessage(jazz)
+        });
 
         socket.on('message', function(input){
         console.log('server broadcasts a message');
@@ -67,16 +66,46 @@ var socket = io.connect('http://localhost:8080');
             
         });
         
+        /*function askNickname(){
+            nickname = prompt('what is your nickname?'); 
+            console.log('nickname asked', nickname)
+            if (!nickname || nickname == null) {
+                askNickname();
+            } 
+        }*/
+
         socket.on('connect', function(data){
+            function checkNickname(){
+                if($('#inputNickname').val()){
+                nickname = $('#inputNickname').val();
+                socket.emit('join', nickname);
+                $('#overlay').css('display','none');
+                $('.nickname').text(nickname);
+
+                }
+            else {
+                $('.errorField').css('visibility', 'visible');
+                $('.errorField').text('Please fill in a nickame');
+            }
+            }           
             $('#status').html('You are connected to the chat!');
             //prompts user to fill in nickname and stores it
-            nickname = prompt('what is your nickname?'); 
-            //notify server on user's nickname
-            socket.emit('join', nickname);
-            $('.nickname').html(nickname);
-	        });
-		});
+            //askNickname();
+            $('#inputNickname').bind('keypress', function(e) {
+                console.log(e, e.keyCode);
+                var code = e.keyCode || e.which;
+                if(code == 13) { 
+                    checkNickname();
+                 }
+            });
+            $('#submitname').click(function(){
+                checkNickname();
+            })
 
+	        });
+		}); 
+
+        
         function insertMessage(data){
             // var newMessage = document.createElement('li');
             // newMessage.innerHTML = data;

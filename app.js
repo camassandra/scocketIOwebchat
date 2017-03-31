@@ -7,13 +7,16 @@ const io = require('socket.io')(server);
 let messages = [];
 let users = []
 
-
-
+function resetChat(){
+	let messages = [];
+	let users = []
+	//redirect('/')
+};
+setInterval(resetChat, 60000);
 // port setting
 //app.listen(port); changes to 
 
 var port = 8080
-
 
 //here comes the middleware stuff!
 
