@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two|Unica+One');
 
+html, body {
+  height: 100%;
+}
+body{
+  overflow: hidden;
+}
+
 .violet{
   padding:20px;
   text-align:center;
@@ -11,7 +18,7 @@
   padding:20px;
  text-align:center;
   height:100px;
-  background: rgba(120, 150, 150, 0.4) 49%
+  background: rgba(120, 150, 150, 0.9) 49%
 }
 
 
@@ -49,11 +56,10 @@ p {
     background-color: #FFF;
     z-index: 1;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 130px;
 }
 .errorField{
   visibility: hidden;
-  
   margin: 0 auto;
   color: #B21039;
   font-family: 'Shadows Into Light Two', cursive;
@@ -84,22 +90,6 @@ p {
   font-size: 17px;
 }
 
-#chatbox {
-  border-color: #FF3064;
-  border-width: 7px;
-  border-radius: 10px;
-  border-style: solid;
-  text-align:left;
-  margin:0 auto;
-  margin-bottom:25px;
-  margin-top: 10px;
-  padding:10px;
-  background:#fff;
-  height:370px;
-  width:630px;
-  overflow:auto; 
-}
-
 #socketDescr {
   border-color: #FF3064;
   border-width: 7px;
@@ -116,10 +106,24 @@ p {
   overflow:auto; 
 }
 #chatConversation {
+  border-color: #FF3064;
+  border-width: 7px;
+  border-radius: 10px;
+  border-style: solid;
+  text-align:left;
+  margin:0 auto;
+  margin-bottom:25px;
+  margin-top: 10px;
+  padding:10px;
+  background:#fff;
+  height:370px;
+  width:630px;
+  overflow-y: scroll;
+}
+#chatConversation, #chatbox {
   color: #0A0113;
   font-family: 'Shadows Into Light Two', cursive;
   font-size: 17px;
-  border-color: #0A0113;
   border-style: solid, 4px;
 }
 #status {
@@ -128,9 +132,15 @@ p {
   font-family: 'Unica One', cursive;
 }
 #exit, a, .nickname {
-  color: #E3D61E;
   font-weight: bold;
   font-family: 'Unica One', cursive;
+}
+
+#exit, a {
+  color: #E3D61E;
+}
+.nickname {
+  color: #fff;
 }
 #out{
   padding:20px;
@@ -150,6 +160,7 @@ p {
   font-size: 20px;
   color: #B21039;
   margin-top: 10px;
+  visibility: hidden;
 }
 #submitmsg{
     margin: 0;

@@ -3,6 +3,7 @@ const app = express();
 const http = require("http");
 //create a http server
 const server = http.createServer(app);
+//now server and socket are sharing same http request
 const io = require('socket.io')(server);
 const reload = require('reload');
 reloadServer= reload(server, app);
@@ -12,12 +13,13 @@ let messages = [];
 let users = []
 
 function resetChat(){
-	let messages = [];
-	let users = []
+	messages = [];
+	users =[];
 	console.log('messages cleared')
+	console.log(users);
 	reloadServer.reload();
 };
-setInterval(resetChat, 180000);
+setInterval(resetChat, 30000);
 //every 3 min and reloads page
 //resets chat every hour with 3600000ms 
 
@@ -47,8 +49,8 @@ io.on('connection', function (client) {
 	console.log('Hello! a user is connected');
 		//emit  event message on client side(CHROME)
 	if (users.length > 0 ){
-	            console.log('///////////')
-	            console.log(users, messages)
+	            console.log('users and messages')
+	            console.log(users, ';', messages)
 	             var html = '';
             for (var i = 0; i < messages.length; i++) {
                      html += '<li>' + users[i] + ': ';
